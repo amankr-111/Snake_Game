@@ -92,8 +92,37 @@ function drawSnake(){
     })
 }
 function changeDirection(event){
+
         const keyPress=event.keyCode
-        console.log(keyPress)
+        const LEFT= 37
+        const RIGHT=39
+        const UP= 38
+        const DOWN=40
+
+        const goingUp=(yVelosity== -unitSize)
+        const goingDown=(yVelosity== unitSize)
+        const goingLeft=(xVelosity== -unitSize)
+        const goingRight=(xVelosity== unitSize)
+      
+        switch(true)
+        {
+            case(keyPress==LEFT && !goingRight):
+                xVelosity= -unitSize
+                yVelosity= 0;
+                break;
+            case(keyPress==RIGHT && !goingLeft):
+                xVelosity= unitSize
+                yVelosity= 0;
+                break;
+            case(keyPress==UP && !goingDown):
+                xVelosity= 0
+                yVelosity= -unitSize
+                break;
+            case(keyPress==DOWN && !goingUp):
+                xVelosity= 0
+                yVelosity= unitSize
+                break;
+        }
 }
 function checkGameOver(){}
 function resetGame(){
