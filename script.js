@@ -4,6 +4,10 @@ const scoreText= document.querySelector("#scoreText")
 const resetBtn= document.querySelector("#resetBtn")
 const gameWidth= gameBoard.width;
 const gameHeight= gameBoard.height
+const easy= document.querySelector("#easyBtn")
+const mid= document.querySelector("#midBtn")
+const hard= document.querySelector("#hardBtn")
+let speed=100;
 
 const boardBackground= "white"
 const snakeColor= "Green"
@@ -29,7 +33,19 @@ let snake=[
 
 window.addEventListener("keydown",changeDirection)
 resetBtn.addEventListener("click",resetGame)
-
+easyBtn.addEventListener("click",easyfun)
+midBtn.addEventListener("click",midfun)
+hardBtn.addEventListener("click",hardfun)
+function easyfun(){
+    speed=100
+}
+function midfun(){
+    speed=85
+   
+}
+function hardfun(){
+    speed=70
+}
 gameStart();
 function gameStart(){
     running=true
@@ -47,7 +63,10 @@ function nextTick(){
             drawSnake()
             checkGameOver()
             nextTick()
-        },75)
+            console.log(speed)
+        },speed
+        )
+        
     }
     else{
         displayGameOver()
@@ -154,6 +173,7 @@ function displayGameOver(){
     ctx.fillStyle="black"
     ctx.textAlign="center"
     ctx.fillText("GAME OVER! 😝", gameWidth/2, gameHeight/2)
+    gameBoard.fillStyle="red"
     running = false;
 }
 function resetGame(){

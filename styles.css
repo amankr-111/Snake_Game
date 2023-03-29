@@ -3,22 +3,62 @@ body{
 }
 #gameBoard{
         border: 2px solid;
+        border-radius: 10px;
         box-shadow:3px 2px 2px 2px rgb(101, 3, 3);
 }
 #gameContainer{
+    display: flex;
+    justify-content: center;
 
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    /* text-align: center; */
 }
 #scoreText{
   font-size: 100px;
   font-family: 'Courier New', Courier, monospace;
 }
 #resetBtn{
+    margin-top: 20px;
     font-size: 35px;
+    margin-left:300px;
     font-family: "permanent marker",cursive;
     border-radius: 12px;
     box-shadow: 3px 2px 2px rgb(61, 3, 3);
-    background-color: rgb(17, 200, 17);
+    background-color: rgb(121, 255, 121);
     cursor: pointer;
+}
+#level{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+.btn{
+
+    background-color: transparent;
+    margin-bottom: 70px;
+    font-size:50px;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+#heading{
+    font-size:47px;
+    margin-left: 700px;
+}
+#base{
+    display: flex;
+  align-items: center;
+}
+#gameReset{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+#score{
+    margin-left: 50px;
+    display: grid;
 }

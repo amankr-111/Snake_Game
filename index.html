@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="./snake.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css"/>
-    <title>Snake Game</title>
+    <title>Snaky Tail</title>
     
   </head>
   <body> 
+    <div id="base">
+      <h1 id="heading">Snaky Tail 🐍</h1>
+ 
+    <button id="resetBtn">Re Start</button>
+    </div>
     <div id="gameContainer">
-      <canvas id="gameBoard" width="500" height="500"></canvas>
-      <div id="scoreText">0</div>
-      <button id="resetBtn">Reset</button>
+      <div id="level">
+        <h2 style="font-size: 50px;"> Levels</h2>
+       <button class="btn" id="easyBtn">Easy</button>
+       <button class="btn" id="midBtn">Medium</button>
+       <button class="btn" id="hardBtn">Hard</button>
+      </div>
+<div id="gameReset">
+  <canvas id="gameBoard" width="600" height="600"></canvas>
+</div>
+<div id="score">
+ <h1 style="font-size: 50px;">
+   Score
+ </h1>
+  <div id="scoreText">
+    0
+  </div>
+</div>
     </div>
     <script src="./script.js"></script> 
   </body>
